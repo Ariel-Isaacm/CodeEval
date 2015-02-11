@@ -12,7 +12,7 @@ namespace UniqueElements
             string[] numeros;
             ArrayList final;
             string salida;
-            using (StreamReader reader = File.OpenText("C:/Users/Admin/Desktop/texto.txt"))
+            using (StreamReader reader = File.OpenText(args[0]))
             
                 while (!reader.EndOfStream)
                 {
