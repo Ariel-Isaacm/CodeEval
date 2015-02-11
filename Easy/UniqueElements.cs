@@ -12,7 +12,7 @@ namespace UniqueElements
             string[] numeros;
             ArrayList final;
             string salida;
-            using (StreamReader reader = File.OpenText(args[0]))
+            using (StreamReader reader = File.OpenText("C:/Users/Admin/Desktop/texto.txt"))
             
                 while (!reader.EndOfStream)
                 {
@@ -25,14 +25,11 @@ namespace UniqueElements
                     {
                         if (!final.Contains(item))
                         {
+                            salida += item + ",";
                             final.Add(item);
                         }
                     }
-                    foreach (var item in final)
-                    {
-                        salida += item+",";
-                        
-                    }
+                  
 
                     Console.WriteLine(salida.Substring(0,salida.Length-1));
                 }
